@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>长宽高</title>
+    <style>
+        input{
+            marign-left:20px:
+        }
+        div.btn{
+         position:absolute;
+         left:50%;
+         margin-left:-80px;
+          /*margin:0 auto;*/
+          /*border:1px  solid darkred;*/
+      }
+      #div1{
+          width: 100px;
+          height: 100px;
+          position:absolute;
+          top:100px;
+          left:50%;
+          margin-left:-50px;
+          background:black;
+      }
+    </style>
+</head>
+<body>
+<div class="btn">
+    <input type="button" value="变宽"/>
+    <input type="button" value="变长"/>
+    <input type="button" value=" 变红"/>
+    <input type="button" value="隐藏"/>
+    <input type="button" value="重置"/>
+</div>
+<div id="div1"></div>
+</body>
+<script>
+    var input=document.querySelectorAll('input');
+    input[0].onclick=function(){
+        div1.style.height='200px';
+    }
+    input[1].onclick=function(){
+        div1.style.width='200px';
+    }
+    input[2].onclick=function(){
+        div1.style.background='red';
+    }
+    input[3].onclick=function(){
+        div1.style.display='none';
+    }
+    input[4].onclick=function(){
+        div1.style.cssText='height:100px;width:100px;background:black';
+    }
+</script>
+</html>
